@@ -21,7 +21,7 @@
         delete from t_checkitem where id = #{id}
     </delete>
     <!--根据检查项ID统计数据量-->
-    <select id="findCountByCheckItemId" parameterType="int" resultType="long">
+    <select id="findCountByCheckItemId" parameterType="int" resultType="java.lang.Long">
         select count(*) from t_checkgroup_checkitem where checkitem_id = #{checkitem_id}
     </select>
 
@@ -58,6 +58,10 @@
 
     <select id="findById" parameterType="int" resultType="com.itheima.pojo.CheckItem">
         select * from t_checkitem where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.itheima.pojo.CheckItem">
+        select * from t_checkitem
     </select>
 
 </mapper>

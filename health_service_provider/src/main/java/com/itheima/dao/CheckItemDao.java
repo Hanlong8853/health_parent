@@ -10,6 +10,8 @@ package com.itheima.dao;
 import com.github.pagehelper.Page;
 import com.itheima.pojo.CheckItem;
 
+import java.util.List;
+
 /** Copyright (C), 2015-2020 
  * FileName: CheckItemDao 
  * Author: hanlong 
@@ -18,15 +20,13 @@ import com.itheima.pojo.CheckItem;
  */
 public interface CheckItemDao {
     public void add(CheckItem checkItem);
-
     public Page<CheckItem> selectByCondition(String queryString);
-
-    //CheckItemDao接口中扩展方法findCountByCheckItemId和deleteById
+    public long findCountByCheckItemId(Integer id);
     public void deleteById(Integer id);
-    public long findCountByCheckItemId(Integer checkItemId);
-
     public void edit(CheckItem checkItem);
     public CheckItem findById(Integer id);
+    public List<CheckItem> findAll();
+
 
 
 

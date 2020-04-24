@@ -18,6 +18,8 @@ import com.itheima.entity.PageResult;
 import com.itheima.entity.QueryPageBean;
 import com.itheima.pojo.CheckItem;
 
+import java.util.List;
+
 /**
  * 检查项服务接口
  */
@@ -35,6 +37,9 @@ public interface CheckItemService {
 
     //根据Id 查询
     public CheckItem findById(Integer id);
+
+    //查询全部
+    public List<CheckItem> findAll();
 
 
 
