@@ -31,5 +31,11 @@ public interface CheckGroupService {
      */
     void delete(Integer id)throws Exception;
 
+    /**
+     * 查询全部检查组
+     * @return
+     */
+    List<CheckGroup> findAll();
+
 
 }

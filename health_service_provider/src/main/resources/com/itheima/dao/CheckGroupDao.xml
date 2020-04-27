@@ -72,4 +72,8 @@
     <delete id="delete" parameterType="int">
         DELETE FROM t_checkgroup WHERE id = #{id}
     </delete>
+
+    <select id="findAll" resultType="com.itheima.pojo.CheckGroup">
+        SELECT * FROM t_checkgroup
+    </select>
 </mapper>
